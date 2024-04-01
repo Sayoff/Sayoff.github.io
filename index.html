@@ -30,7 +30,17 @@ header h2 {
     text-align: center;
 }
 
-#cont1,
+.cont-container{
+margin-left: 7%;
+margin-right: 7%;
+text-align: justify;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+border-radius: 2px;
+padding:3%;
+padding-top:2%;
+
+}
+
 #cont2,
 #cont3 {
     display: none;
@@ -51,34 +61,79 @@ header h2 {
 .btnimg-atv, .button-img:active {
     opacity: 0.7;
 }
+
+.imgprint{
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+h1{
+    text-align:center;
+    text-shadow: 0px 2px 5px rgb(167, 167, 167);
+}
 </style>
 </head>
 <body>
 
 <header>
 <center>
-    <h2>Acessibilidade (Três Sites)</h2>
+    <h2>Trabalho De Acessibilidade</h2>
 </header>
 
 <div class="container">
     <img src="nikebtn.png" alt="Botão 1" class="button-img" onclick="mostCont('cont1', this)">
     <img src="adidasbtn.png" alt="Botão 2" class="button-img" onclick="mostCont('cont2', this)">
     <img src="pumabtn.png" alt="Botão 3" class="button-img" onclick="mostCont('cont3', this)">
-
-    <div id="cont1">
-        <h3>Nike</h3>
-        <p>Lorem Ipsum</p>
+</div>
+<div class="cont-container">
+<div id="cont1">
+        <h1>NIKE</h1>
+            <center>
+            <img src="nikeprint.png" class="imgprint">
+            </center>
+            <h2>Conceitos:</h2>
+                <h3>Usabilidade</h3>    
+                <p>Como um marca de vendas a Nike prioriza a usabilidade em seu site, com um layout minimalista e fácil navegação. Os produtos são apresentados de forma clara, juntamente de diversos filtros de pesquisa  que ajudam o usuário a encontrar o que estão procurando. O site também conta com uma página exclusiva de ajuda que apresenta ao usuário perguntas frequentes, um chatbot e até meios de contato para sanar eventuais dúvidas.</p>
+                <h3>Ergonomia</h3>    
+                <p>O site da Nike é o mais minimalista dentre os três ajudando muito no conforto e compreensão do usuário, nos apresentando apenas o necessário em sua página inicial e nos levando a outras páginas através de simples menu lateral. Apresentando um padrão em todas as páaginas o site também é responsivo e adapta-se bem a diferentes dispositivos, garantindo a mesma  experiência  em smartphones, tablets ou computadores.</p>
+                
+            <h2>Tecnicas:</h2>
+                <h3>Design centrado em humanos (HCD):</h3>    
+                <p>A Nike provavelmente utiliza das análises de dados e feedback dos clientes para melhorar continuamente a experiência do usuário em seu site, garantindo que atenda às necessidades e expectativas dos usuários.</p>
     </div>
+
     <div id="cont2">
-        <h3>Adidas</h3>
-        <p>Lorem Ipsum</p>
+        <h1>ADIDAS</h1>
+            <center>
+                <img src="adidasprint.png" class="imgprint">
+            </center>
+            <h2>Conceitos:</h2>
+                <h3>Usabilidade</h3>    
+                <p>A Adidas usa da usabilidade em seu site, principalmente por meio de uma navegação intuitiva e com destaques a itens e locais  específicos atraindo o usuário. Os produtos são categorizados de forma clara e as páginas são projetadas para facilitar a descoberta e compra. Além disso também fornece uma página de ajuda com perguntas frequentes ou atendimento ao cliente para possiveis dificuldades que o usuário pode vir a enfrentar </p>
+                <h3>Ergonomia</h3>    
+                <p>O site da Adidas conta com uma página de inicio bem moderna apresentando de forma breve suas principais ofertas e história, contendo um menu lateral, que destaca certas categorias e que nos leva para outras páginas, ademais o site também apresenta um um  design responsivo garantindo assim uma experiência consistente, adaptando-se a diferentes dispositivos, contudo dentre os itens que mais chamam atenção, nas diferentes versões, estão os pop-ups que surgem aos montes ao acessar o site pela primeira vez  e que podem acabar gerando confusão ao usuário, principalmente caso esteja em uma tela pequena como a de um celular     
+                </p>
+                
+            <h2>Tecnicas:</h2>
+                <h3>Design centrado em humanos (HCD):</h3>    
+                <p> Adidas emprega análises de dados e feedback dos clientes possivelmente para melhorar a experiência do usuário em seu site, garantindo que atenda cada vez mais  às necessidades e preferências dos usuários.</p>
     </div>
     <div id="cont3">
-        <h3>Puma</h3>
-        <p>Lorem Ipsum</p>
+        <h1>PUMA</h1>
+        <center>
+            <img src="pumaprint.png" class="imgprint">
+        </center>
+        <h2>Conceitos:</h2>
+            <h3>Usabilidade</h3>    
+            <p>A Puma traz em seu site, uma interface intuitiva, organizada em diversas categorias claras e fornecendo filtros de pesquisa que ajudam os usuários a encontrar seus produtos. Assim como os outros sites a Puma possui uma página relacionada a perguntas frequentes e atendimento ao cliente, porém diferentemente dos outros o site peca no quesito navegabilidade, sendo confuso graças ao menu e fornecendo poucas opções de navegação entre páginas.</p>
+            <h3>Ergonomia</h3>    
+            <p>O site da Puma em sua pagina inicial destaca  suas principais coleções organizados com banners, o que facilita muito a compreensão. O site apresenta um menu de hamburguer não tão agradável, que foge dos padrões ao ficar na parte superior direita da página, que nos leva para todas as outras páginas, além do mais todas seguem um mesmo padrão e são organizadas da mesma forma, facilitando a adaptabilidade do usuário. Além disso  o site é responsivo e adaptável a diferentes dispositivos, o que garante uma boa experiência independente do dispositivo. </p>
+            
+        <h2>Tecnicas:</h2>
+            <h3>Design centrado em humanos (HCD):</h3>    
+            <p>A Puma pode utilizar das análises de dados e feedback dos clientes para melhorar a experiência do usuário em seu site, garantindo que atenda às necessidades e preferências dos usuários e que melhore cada vez mais com o passar do tempo.</p>    
     </div>
 </div>
-
 <script>
 let lastSelectedButton = null;
 
