@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site com Troca de Tópicos</title>
+<style>
+body {
+    font-family: "Calibri", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #444;
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header h2 {
+    text-shadow: 1px 1px 2px black;
+    font-size: 1rem;
+}
+
+.container {
+    text-align: center;
+}
+
+#cont1,
+#cont2,
+#cont3 {
+    display: none;
+}
+
+.button-img {
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Adicionando transição de opacidade */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    width: 7rem;
+}
+
+.button-img:hover {
+    transform: scale(1.1);
+}
+
+.btnimg-atv, .button-img:active {
+    opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<header>
+<center>
+    <h2>Acessibilidade (Três Sites)</h2>
+</header>
+
+<div class="container">
+    <img src="nikebtn.png" alt="Botão 1" class="button-img" onclick="mostCont('cont1', this)">
+    <img src="adidasbtn.png" alt="Botão 2" class="button-img" onclick="mostCont('cont2', this)">
+    <img src="pumabtn.png" alt="Botão 3" class="button-img" onclick="mostCont('cont3', this)">
+
+    <div id="cont1">
+        <h3>Nike</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+    <div id="cont2">
+        <h3>Adidas</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+    <div id="cont3">
+        <h3>Puma</h3>
+        <p>Lorem Ipsum</p>
+    </div>
+</div>
+
+<script>
+let lastSelectedButton = null;
+
+function mostCont(id, button) {
+    document.getElementById('cont1').style.display = 'none';
+    document.getElementById('cont2').style.display = 'none';
+    document.getElementById('cont3').style.display = 'none';
+
+    document.getElementById(id).style.display = 'block';
+
+    if (lastSelectedButton !== null) {
+        lastSelectedButton.classList.remove('btnimg-atv');
+    }
+    button.classList.add('btnimg-atv');
+
+    
+    lastSelectedButton = button;
+}
+</script>
+
+</body>
+</html>
