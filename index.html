@@ -118,7 +118,7 @@ hr{
 </header>
 
 <div class="container">
-    <img src="nikebtn.png" alt="Botão 1" class="button-img btnimg-atv" onclick="mostCont('cont1', this)">
+    <img src="nikebtn.png" alt="Botão 1" class="button-img" onclick="mostCont('cont1', this)">
     <img src="adidasbtn.png" alt="Botão 2" class="button-img" onclick="mostCont('cont2', this)">
     <img src="pumabtn.png" alt="Botão 3" class="button-img" onclick="mostCont('cont3', this)">
 </div>
@@ -193,6 +193,7 @@ hr{
     </div>
     <script>
     let lastSelectedButton = null;
+    const nikeButton = document.querySelector('img[src="nikebtn.png"]');
 
     function mostCont(id, button) {
     document.getElementById('cont1').style.display = 'none';
@@ -207,7 +208,7 @@ hr{
     button.classList.add('btnimg-atv');
 
     
-    lastSelectedButton = button;
+    lastSelectedButton = nikeButton;
 }
 </script>
 
