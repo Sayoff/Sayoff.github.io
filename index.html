@@ -19,6 +19,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
+    text-align: center;
 }
 
 header h2 {
@@ -31,13 +32,13 @@ header h2 {
 }
 
 .cont-container{
-margin-left: 7%;
-margin-right: 7%;
+/* margin: topo, direita, baixo, esquerda  */
+margin: 1% 7% 4% 7%;
 text-align: justify;
 box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-border-radius: 2px;
+border-radius: 5px;
 padding:3%;
-padding-top:2%;
+padding-top:1%;
 
 }
 
@@ -65,11 +66,38 @@ padding-top:2%;
 .imgprint{
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    text-align: center;
+}
+.leg-container{
+    position:relative;
+}
+.leg-print{
+    bottom: 4px;
+    left: 0;
+    border-radius: 5px;
+    position:absolute;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2));
+    color: white;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s;
+    text-align: center;
+    font-size: 18px;
 }
 
+.leg-container:hover .leg-print{
+    opacity: 1;
+}
 h1{
     text-align:center;
     text-shadow: 0px 2px 5px rgb(167, 167, 167);
+}
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #444, rgba(0, 0, 0, 0));
 }
 
 @media screen and (max-width: 992px) {
@@ -79,15 +107,13 @@ h1{
     margin-left: 1rem;
     margin-right: 1rem;
     width: 5.5rem;
-}
-
+    }
 }
 </style>
 </head>
 <body>
 
 <header>
-<center>
     <h2>Trabalho De Acessibilidade</h2>
 </header>
 
@@ -97,58 +123,77 @@ h1{
     <img src="pumabtn.png" alt="Botão 3" class="button-img" onclick="mostCont('cont3', this)">
 </div>
 <div class="cont-container">
-<div id="cont1">
-        <h1>NIKE</h1>
-            <center>
-            <img src="nikeprint.png" class="imgprint">
-            </center>
-            <h2>Conceitos:</h2>
-                <h3>Usabilidade</h3>    
-                <p>Como um marca de vendas a Nike prioriza a usabilidade em seu site, com um layout minimalista e fácil navegação. Os produtos são apresentados de forma clara, juntamente de diversos filtros de pesquisa  que ajudam o usuário a encontrar o que estão procurando. O site também conta com uma página exclusiva de ajuda que apresenta ao usuário perguntas frequentes, um chatbot e até meios de contato para sanar eventuais dúvidas.</p>
-                <h3>Ergonomia</h3>    
-                <p>O site da Nike é o mais minimalista dentre os três ajudando muito no conforto e compreensão do usuário, nos apresentando apenas o necessário em sua página inicial e nos levando a outras páginas através de simples menu lateral. Apresentando um padrão em todas as páaginas o site também é responsivo e adapta-se bem a diferentes dispositivos, garantindo a mesma  experiência  em smartphones, tablets ou computadores.</p>
+    <div id="cont1">
+            <h1>NIKE</h1>
                 
-            <h2>Tecnicas:</h2>
-                <h3>Design centrado em humanos (HCD):</h3>    
-                <p>A Nike provavelmente utiliza das análises de dados e feedback dos clientes para melhorar continuamente a experiência do usuário em seu site, garantindo que atenda às necessidades e expectativas dos usuários.</p>
-    </div>
-
-    <div id="cont2">
-        <h1>ADIDAS</h1>
-            <center>
-                <img src="adidasprint.png" class="imgprint">
-            </center>
-            <h2>Conceitos:</h2>
-                <h3>Usabilidade</h3>    
-                <p>A Adidas usa da usabilidade em seu site, principalmente por meio de uma navegação intuitiva e com destaques a itens e locais  específicos atraindo o usuário. Os produtos são categorizados de forma clara e as páginas são projetadas para facilitar a descoberta e compra. Além disso também fornece uma página de ajuda com perguntas frequentes ou atendimento ao cliente para possiveis dificuldades que o usuário pode vir a enfrentar </p>
-                <h3>Ergonomia</h3>    
-                <p>O site da Adidas conta com uma página de inicio bem moderna apresentando de forma breve suas principais ofertas e história, contendo um menu lateral, que destaca certas categorias e que nos leva para outras páginas, ademais o site também apresenta um um  design responsivo garantindo assim uma experiência consistente, adaptando-se a diferentes dispositivos, contudo dentre os itens que mais chamam atenção, nas diferentes versões, estão os pop-ups que surgem aos montes ao acessar o site pela primeira vez  e que podem acabar gerando confusão ao usuário, principalmente caso esteja em uma tela pequena como a de um celular     
-                </p>
+                <div class="leg-container">
+                    <img src="nikeprint.png" class="imgprint">
+                    <div class="leg-print"><h3>Site da Nike</h3></div>
+                </div>
                 
+                <h2>Conceitos:</h2>
+                    <h3>Usabilidade</h3>    
+                    <p>Como um marca de vendas a Nike prioriza a usabilidade em seu site, com um layout minimalista e fácil navegação. Os produtos são apresentados de forma clara, juntamente de diversos filtros de pesquisa  que ajudam o usuário a encontrar o que estão procurando. O site também conta com uma página exclusiva de ajuda que apresenta ao usuário perguntas frequentes, um chatbot e até meios de contato para sanar eventuais dúvidas.</p>
+                    <h3>Ergonomia</h3>    
+                    <p>O site da Nike é o mais minimalista dentre os três ajudando muito no conforto e compreensão do usuário, nos apresentando apenas o necessário em sua página inicial e nos levando a outras páginas através de simples menu lateral. Apresentando um padrão em todas as páaginas o site também é responsivo e adapta-se bem a diferentes dispositivos, garantindo a mesma  experiência  em smartphones, tablets ou computadores.</p>
+                    <h3>Acessibilidade</h3>
+                    <p>A Nike vem se esforçando muito para melhorar a acessibilidade do seu site com o passar dos anos e sempre tentando  garantir que seja acessível a usuários com deficiência visual, auditiva, motora, cognitiva, entre outras.</p>
+    
+                <h2>Tecnicas:</h2>
+                    <h3>Design centrado em humanos (HCD)</h3>    
+                    <p>A Nike provavelmente utiliza das análises de dados e feedback dos clientes para melhorar continuamente a experiência do usuário em seu site, garantindo que atenda às necessidades e expectativas dos usuários.</p>
+                    <h3>Design Thinking</h3>
+                    <p>A Nike é muito conhecida por sua abordagem de design thinking em contraste ao desenvolvimento de produtos, o que pode influenciar bastante sua abordagem ao design da web, que garante sem dúvidas, uma experiência de usuário inovadora e 100% centrada no cliente.</p>
+        </div>
+    
+        <div id="cont2">
+            <h1>Adidas</h1>
+                <div class="leg-container">
+                    <img src="adidasprint.png" class="imgprint">
+                    <div class="leg-print"><h3>Site da Adidas</h3></div>
+                </div>
+                    <h2>Conceitos:</h2>
+                    <h3>Usabilidade</h3>    
+                    <p>A Adidas usa da usabilidade em seu site, principalmente por meio de uma navegação intuitiva e com destaques a itens e locais  específicos atraindo o usuário. Os produtos são categorizados de forma clara e as páginas são projetadas para facilitar a descoberta e compra. Além disso também fornece uma página de ajuda com perguntas frequentes ou atendimento ao cliente para possiveis dificuldades que o usuário pode vir a enfrentar </p>
+                    <h3>Ergonomia</h3>    
+                    <p>O site da Adidas conta com uma página de inicio bem moderna apresentando de forma breve suas principais ofertas e história, contendo um menu lateral, que destaca certas categorias e que nos leva para outras páginas, ademais o site também apresenta um um  design responsivo garantindo assim uma experiência consistente, adaptando-se a diferentes dispositivos, contudo dentre os itens que mais chamam atenção, nas diferentes versões, estão os pop-ups que surgem aos montes ao acessar o site pela primeira vez  e que podem acabar gerando confusão ao usuário, principalmente caso esteja em uma tela pequena como a de um celular.</p>
+                    <h3>Acessibilidade</h3>
+                    <p>a Adidas não divulga publicamente suas políticas de acessibilidade, mas é seguro assumir que leva a acessibilidade em consideração em seu web design, por ser um site de uma empresa grande e especialmente quando se trata de usuários com qualquer tipo de deficiência, seja visual, auditiva, entre outras.</p>
+    
+                <h2>Tecnicas:</h2>
+                    <h3>Design centrado em humanos (HCD)</h3>    
+                    <p>a Adidas emprega análises de dados e feedback dos clientes possivelmente para melhorar a experiência do usuário em seu site, garantindo que atenda cada vez mais  às necessidades e preferências dos usuários.</p>
+                    <h3>Design Thinking</h3>
+                    <p>A Adidas é conhecida por sua abordagem design-thinking para o desenvolvimento de produtos, que se estende aos seus esforços online para garantir uma experiência de usuário de alta qualidade.</p>
+        </div>
+        <div id="cont3">
+            <h1>PUMA</h1>
+                <div class="leg-container">
+                    <img src="pumaprint.png" class="imgprint">
+                    <div class="leg-print"><h3>Site da Nike</h3></div>
+                </div>
+                <h3>Usabilidade</h3>
+                <p>A Puma traz em seu site, uma interface intuitiva, organizada em diversas categorias claras e fornecendo filtros de pesquisa que ajudam os usuários a encontrar seus produtos. Assim como os outros sites a Puma possui uma página relacionada a perguntas frequentes e atendimento ao cliente, porém diferentemente dos outros o site peca no quesito navegabilidade, sendo confuso graças ao menu e fornecendo poucas opções de navegação entre páginas.</p>
+                <h3>Ergonomia</h3>    
+                <p>O site da Puma em sua pagina inicial destaca  suas principais coleções organizados com banners, o que facilita muito a compreensão. O site apresenta um menu de hamburguer não tão agradável, que foge dos padrões ao ficar na parte superior direita da página, que nos leva para todas as outras páginas, além do mais todas seguem um mesmo padrão e são organizadas da mesma forma, facilitando a adaptabilidade do usuário. Além disso  o site é responsivo e adaptável a diferentes dispositivos, o que garante uma boa experiência independente do dispositivo. </p>
+                <h3>Acessibilidade</h3> 
+                <p>A Puma está trabalhando para assegurar a acessibilidade de seu site, deixando ele acessível a vários tipos de usuários diferentes, incluindo os com deficiências auditivas, motoras, cognitivas, entre outras.</p>
+    
             <h2>Tecnicas:</h2>
-                <h3>Design centrado em humanos (HCD):</h3>    
-                <p> Adidas emprega análises de dados e feedback dos clientes possivelmente para melhorar a experiência do usuário em seu site, garantindo que atenda cada vez mais  às necessidades e preferências dos usuários.</p>
+                <h3>Design centrado em humanos (HCD)</h3>    
+                <p>A Puma pode utilizar das análises de dados e feedback dos clientes para melhorar a experiência do usuário em seu site, garantindo que atenda às necessidades e preferências dos usuários e que melhore cada vez mais com o passar do tempo.</p>    
+                <h3>Design Thinking</h3>
+                <p>A Puma pode acatar uma abordagem de design thinking em relação ao desenvolvimento de produtos,que influencia sua abordagem ao design da web, garantindo ao usuário uma experiência inovadora e sempre centrada ao cliente.</p>
+        </div>
+        <hr>
+        <h2>Prototipação:</h2>
+        <p>A prototipação é uma forma de visualizar a sua ideia antes de realizá-la, com a criação de um modelo inicial ou representação funcional de um produto, sistema ou em nosso caso um site. A prototipação é uma etapa crucial que possibilita a experimentação e teste de conceitos e funcionalidades antes mesmo de sua criação, graças a isso, ela é amplamente utilizada pois permite a validação de conceitos, identificação de problemas, a redução de riscos e economia de tempo e recursos. </p>
+        <p>Utilizando nosso site como exemplo utilizamos a prototipação para a criação do sistema de botões, principal funcionalidade do site, dessa forma validamos sua funcionalidade e adicionamos no site</p>
     </div>
-    <div id="cont3">
-        <h1>PUMA</h1>
-        <center>
-            <img src="pumaprint.png" class="imgprint">
-        </center>
-        <h2>Conceitos:</h2>
-            <h3>Usabilidade</h3>    
-            <p>A Puma traz em seu site, uma interface intuitiva, organizada em diversas categorias claras e fornecendo filtros de pesquisa que ajudam os usuários a encontrar seus produtos. Assim como os outros sites a Puma possui uma página relacionada a perguntas frequentes e atendimento ao cliente, porém diferentemente dos outros o site peca no quesito navegabilidade, sendo confuso graças ao menu e fornecendo poucas opções de navegação entre páginas.</p>
-            <h3>Ergonomia</h3>    
-            <p>O site da Puma em sua pagina inicial destaca  suas principais coleções organizados com banners, o que facilita muito a compreensão. O site apresenta um menu de hamburguer não tão agradável, que foge dos padrões ao ficar na parte superior direita da página, que nos leva para todas as outras páginas, além do mais todas seguem um mesmo padrão e são organizadas da mesma forma, facilitando a adaptabilidade do usuário. Além disso  o site é responsivo e adaptável a diferentes dispositivos, o que garante uma boa experiência independente do dispositivo. </p>
-            
-        <h2>Tecnicas:</h2>
-            <h3>Design centrado em humanos (HCD):</h3>    
-            <p>A Puma pode utilizar das análises de dados e feedback dos clientes para melhorar a experiência do usuário em seu site, garantindo que atenda às necessidades e preferências dos usuários e que melhore cada vez mais com o passar do tempo.</p>    
-    </div>
-</div>
-<script>
-let lastSelectedButton = null;
+    <script>
+    let lastSelectedButton = null;
 
-function mostCont(id, button) {
+    function mostCont(id, button) {
     document.getElementById('cont1').style.display = 'none';
     document.getElementById('cont2').style.display = 'none';
     document.getElementById('cont3').style.display = 'none';
