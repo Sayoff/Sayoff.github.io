@@ -109,12 +109,37 @@ hr{
     width: 5.5rem;
     }
 }
+
+#font-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#font-controls button {
+    font-size: 1rem;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#font-controls button:hover {
+    background-color: #777;
+}
 </style>
 </head>
 <body>
 
 <header>
     <h2>Trabalho De Acessibilidade</h2>
+    <div id="font-controls">
+        <button onclick="aumentarFonte()">A+</button>
+        <button onclick="diminuirFonte()">A-</button>
+    </div>
 </header>
 
 <div class="container">
@@ -192,8 +217,7 @@ hr{
         <p>Utilizando nosso site como exemplo utilizamos a prototipação para a criação do sistema de botões, principal funcionalidade do site, dessa forma validamos sua funcionalidade e adicionamos no site</p>
     </div>
     <script>
-    const nikeButton = document.querySelector('img[src="nikebtn.png"]');
-    let lastSelectedButton = nikeButton;
+    let lastSelectedButton = null;
 
     function mostCont(id, button) {
     document.getElementById('cont1').style.display = 'none';
@@ -209,6 +233,22 @@ hr{
 
     
     lastSelectedButton = button;
+}
+
+let fontSize = 16; // Tamanho inicial da fonte em pixels
+
+function aumentarFonte() {
+    fontSize += 2; // Aumentar o tamanho da fonte em 2 pixels
+    atualizarTamanhoFonte();
+}
+
+function diminuirFonte() {
+    fontSize = Math.max(12, fontSize - 2); // Diminuir o tamanho da fonte em 2 pixels, com um limite mínimo de 12px
+    atualizarTamanhoFonte();
+}
+
+function atualizarTamanhoFonte() {
+    document.body.style.fontSize = `${fontSize}px`; // Aplicar o tamanho da fonte ao corpo da página
 }
 </script>
 
