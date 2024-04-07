@@ -192,8 +192,8 @@ hr{
         <p>Utilizando nosso site como exemplo utilizamos a prototipação para a criação do sistema de botões, principal funcionalidade do site, dessa forma validamos sua funcionalidade e adicionamos no site</p>
     </div>
     <script>
-    let lastSelectedButton = null;
     const nikeButton = document.querySelector('img[src="nikebtn.png"]');
+    let lastSelectedButton = nikeButton;
 
     function mostCont(id, button) {
     document.getElementById('cont1').style.display = 'none';
@@ -208,7 +208,7 @@ hr{
     button.classList.add('btnimg-atv');
 
     
-    lastSelectedButton = nikeButton;
+    lastSelectedButton = button;
 }
 </script>
 
