@@ -1,0 +1,11 @@
+{
+"companyName": "Samuel",
+"productName": "Uninho",
+"dataUrl": "UninhoWEBGL.data.unityweb",
+"asmCodeUrl": "UninhoWEBGL.asm.code.unityweb",
+"asmMemoryUrl": "UninhoWEBGL.asm.memory.unityweb",
+"asmFrameworkUrl": "UninhoWEBGL.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
