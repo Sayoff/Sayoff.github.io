@@ -1,0 +1,11 @@
+{
+"companyName": "Samuel",
+"productName": "Uninho",
+"dataUrl": "DeckGame.data.unityweb",
+"asmCodeUrl": "DeckGame.asm.code.unityweb",
+"asmMemoryUrl": "DeckGame.asm.memory.unityweb",
+"asmFrameworkUrl": "DeckGame.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"splashScreenStyle": "Dark",
+"backgroundColor": "#580000"
+}
