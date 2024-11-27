@@ -2,6 +2,10 @@ body {
     height: 100vh;
 }
 
+button{
+    border: 4px;
+    border-radius:2px
+}
 header {
     text-align: right;
 }
