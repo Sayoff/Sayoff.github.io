@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Deck!</title>
+    <link rel="shortcut icon" href="../../TemplateData/favicon.ico">
+    <link rel="stylesheet" href="../../TemplateData/style.css">
+    <script src="../../TemplateData/UnityProgress.js"></script>  
+    <script src="../../Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "../../Build/DeckGame.json", {onProgress: UnityProgress});
+    </script>
+</head>
+
+<body>
+    <header>
+        <button type="button" class="clear" onclick="logout()">
+            Sair
+        </button>
+    </header>
+
+    <div class="webgl-content">
+        <div id="gameContainer" style="width: 1024px; height: 576px"></div>
+        <div class="footer">
+          <div class="webgl-logo"></div>
+          <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+          <div class="title">Deck Game</div>
+        </div>
+      </div>
+</body>
+
+
+<link rel="stylesheet" href="../../global.css">
+<link rel="stylesheet" href="home.css">
+
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+<script src="../../firebase-init.js"></script>
+<script src="../../auth-guard.js"></script>
+<script src="home.js"></script>
+
+</html>
